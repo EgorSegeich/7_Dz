@@ -21,12 +21,12 @@ int n = Convert.ToInt32(Console.ReadLine());
 double[,] arr = new double[m,n];
 
 
-    	for(int i=0; i<arr.GetLength(0); i++)
+for(int i=0; i<arr.GetLength(0); i++)
+{
+    for(int j=0; j < arr.GetLength(1); j++)
     {
-        for(int j=0; j < arr.GetLength(1); j++)
-        {
-            arr[i,j] = Math.Round((new Random().NextDouble() * 10), 2);  
-            Console.Write(arr[i,j] +  " "); 
+        arr[i,j] = new Random().NextDouble() * 10 -2;  
+        Console.Write(Math.Round((arr[i,j]),2) + " "); 
         }
         Console.WriteLine();
-    }
+}
